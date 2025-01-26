@@ -1,6 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import { About } from './components/About';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           <Navbar/>
           <Hero/>
         </div>
+        <About/>
         <div className="relative z-0">
         </div>
       </div>
