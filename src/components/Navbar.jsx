@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { styles } from '../styles.js';
 import { navLinks } from '../constants';
-import { logo, menu, close } from '../assets';
+import { logooo, menu, close,  } from '../assets';
 
 const Navbar = () => {
   const [active, setActive] = useState('');
@@ -13,16 +13,16 @@ const Navbar = () => {
     <nav
       className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
+      <div className="w-full flex justify-between items-center max-w-7xl mx-auto pl-4">
         <Link
           to="/"
-          className="flex items-center gap-2"
+          className="flex items-center gap-2 "
           onClick={() => {
             setActive('');
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
+          <img src={logooo} alt="logo" className="w-10 h-10 object-contain m-4" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Lokesh &nbsp;{' '}
             <span className="sm:block hidden">| &nbsp;Software Developer</span>

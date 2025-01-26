@@ -1,4 +1,5 @@
 import logo from './logo.png';
+import logooo from './logooo.png';
 import backend from './backend.png';
 import creator from './creator.png';
 import mobile from './mobile.png';
@@ -33,6 +34,7 @@ import market_predict from './market_predict.jpg';
 
 export {
   logo,
+  logooo,
   backend,
   creator,
   mobile,
