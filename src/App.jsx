@@ -2,7 +2,8 @@ import { BrowserRouter } from 'react-router-dom';
 import {
   About,
   Hero,
-  Navbar
+  Navbar,
+  Tech
 } from './components';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Hero/>
         </div>
         <About/>
+        <Tech />
         <div className="relative z-0">
         </div>
       </div>
