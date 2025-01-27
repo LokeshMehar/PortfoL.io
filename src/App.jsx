@@ -1,6 +1,7 @@
 import { BrowserRouter } from 'react-router-dom';
 import {
   About,
+  Experience,
   Hero,
   Navbar,
   Tech
@@ -15,6 +16,7 @@ function App() {
           <Hero/>
         </div>
         <About/>
+        <Experience/>
         <Tech />
         <div className="relative z-0">
         </div>
