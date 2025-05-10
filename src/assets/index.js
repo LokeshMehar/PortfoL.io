@@ -1,4 +1,6 @@
 import logo from './logo.png';
+import leetcode from './leetcode.svg';
+import githuba from './github.svg';
 import logooo from './logooo.png';
 import backend from './backend.png';
 import creator from './creator.png';
@@ -17,6 +19,7 @@ import numpy from './tech/numpy.png';
 import pandas from './tech/pandas.png';
 import pycharm from './tech/pycharm.png';
 import jupyter from './tech/jupyter.png';
+
 
 import microsoft from './company/microsoft.jpg';
 import adani from './company/adani.png';
@@ -62,4 +65,6 @@ export {
   kamel_tourki,
   nati_gezahegn,
   zakaria,
+  leetcode,
+  githuba,
 };

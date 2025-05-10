@@ -10,6 +10,7 @@ import {
   Tech,
   Works
 } from './components';
+import Achievements from './components/Achievements';
 
 function App() {
   return (
@@ -19,14 +20,15 @@ function App() {
           <Navbar/>
           <Hero/>
         </div>
-        <About/>
-        <Experience/>
-        <Tech />
-        <Works/>
-        <Feedbacks/>
+        {/* <About/> */}
+        {/* <Experience/> */}
+        {/* <Tech /> */}
+        <Achievements/>
+        {/* <Works/> */}
+        {/* <Feedbacks/> */}
         <div className="relative z-0">
-          <Contact/>
-          <StarsCanvas/>
+          {/* <Contact/> */}
+          {/* <StarsCanvas/> */}
         </div>
       </div>
     </BrowserRouter>
