@@ -1,5 +1,4 @@
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
-import { FaGithub } from 'react-icons/fa';
 
 // eslint-disable-next-line react/prop-types
 const GitHubCard = ({ contributionCount = 365 }) => (
@@ -34,12 +33,12 @@ const GitHubCard = ({ contributionCount = 365 }) => (
       {/* Feature Highlights */}
       <div className="border-t border-gray-700 pt-3 text-[13px] text-gray-300">
         <h4 className="text-white font-semibold mb-2">Key Practices & Tools</h4>
-        <ul className="space-y-1">
-          <li>🔧 Daily usage of commands: <code>git rebase</code>, <code>git cherry-pick</code>, <code>git stash</code></li>
-          <li>🚀 Implemented CI/CD via GitHub Actions</li>
-          <li>📂 Maintained clean commit history with conventional commits</li>
-          <li>🤝 Reviewed and managed pull requests using best practices</li>
-          <li>📊 Familiar with GitHub Insights for repository analytics</li>
+        <ul className="space-y-1 list-disc list-inside space-y-1">
+          <li>Daily usage of commands: <code>git rebase</code>, <code>git cherry-pick</code>, <code>git stash</code></li>
+          <li>Implemented CI/CD via GitHub Actions</li>
+          <li>Maintained clean commit history with conventional commits</li>
+          <li>Reviewed and managed pull requests using best practices</li>
+          <li>Familiar with GitHub Insights for repository analytics</li>
         </ul>
       </div>
     </div>
