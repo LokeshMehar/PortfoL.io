@@ -12,6 +12,7 @@ import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { textVariant } from '../utils/motion';
 import ExperienceCardDSA from './ExperienceCardDSA';
+import GitHubCard from './GithubCard';
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
@@ -66,6 +67,7 @@ const Experience = () => {
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
           <ExperienceCardDSA />
+          <GitHubCard contributionCount={662} />
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}
