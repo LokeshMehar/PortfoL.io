@@ -7,11 +7,11 @@ const GitHubCard = ({ contributionCount = 365 }) => (
     contentStyle={{ background: '#1d1836', color: '#fff' }}
     contentArrowStyle={{ borderRight: '7px solid #232631' }}
     date="GitHub & Version Control"
-    iconStyle={{ background: '#24292e', color: '#fff' }}
+    iconStyle={{ background: '#24112e', color: '#fff' }}
     icon={
       <div className="flex justify-center items-center w-full h-full text-white text-xl">
         <img
-          src='./github.svg' // Replace with your GitHub icon path
+          src='./github.svg' 
           alt={'GitHub Icon'}
           className="w-[80%] h-[80%] object-contain"
         />

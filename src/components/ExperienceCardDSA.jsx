@@ -5,11 +5,16 @@ const ExperienceCardDSA = () => (
   <VerticalTimelineElement
     contentStyle={{ background: '#1d1836', color: '#fff' }}
     contentArrowStyle={{ borderRight: '7px solid #232631' }}
-    iconStyle={{ background: '#4a90e2', color: '#fff' }}
+    date="DSA & Problem Solving"
+    iconStyle={{ background: '#24292e', color: '#fff' }}
     icon={
-      <div className="flex justify-center items-center w-full h-full text-white text-xl font-bold">
-        💻
-      </div>
+        <div className="flex justify-center items-center w-full h-full text-white text-xl">
+            <img
+                src='./leetcode.svg' 
+                alt={'LeetCode Icon'}
+                className="w-[70%] h-[70%] object-contain"
+            />
+        </div>
     }
   >
     {/* Top Section: Chart + Bullet Points */}
