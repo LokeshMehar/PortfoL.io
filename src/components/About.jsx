@@ -6,6 +6,7 @@ import { styles } from '../styles';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
+import Github from './Github';
 
 const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
@@ -54,6 +55,8 @@ const About = () => {
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
       </div>
+
+      <Github />
 
       
     </>
