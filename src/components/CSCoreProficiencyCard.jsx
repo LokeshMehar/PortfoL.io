@@ -5,7 +5,7 @@ const CSCoreProficiencyCard = () => (
     contentStyle={{ background: '#1d1836', color: '#fff' }}
     contentArrowStyle={{ borderRight: '7px solid #232631' }}
     date="Academics & Core Technical Foundation"
-    iconStyle={{ background: '#1a2e3a', color: '#fff' }}
+    iconStyle={{ background: '#232631', color: '#fff' }}
     icon={
       <div className="flex justify-center items-center w-full h-full text-white text-xl">
         🎓
