@@ -7,7 +7,7 @@ import {
   Feedbacks,
   Navbar,
   StarsCanvas,
-  Tech,
+  // Tech,
   Works
 } from './components';
 
@@ -18,19 +18,17 @@ import Banner from './components/Banner';
 function App() {
   return (
     <BrowserRouter>
-      {/* <div className="relative z-0 app"> */}
+      <div className="relative z-0 app">
           {/* <Navbar/> */}
           <Banner/>
         <About/>
-        {/* <Experience/> */}
-        {/* <Tech /> */}
-        {/* <Works/> */}
-        {/* <Feedbacks/> */}
+        <Experience/>
+        <Works/>
         {/* <div className="relative z-0">
           <Contact/>
           <StarsCanvas/>
-        </div> */}
-      {/* </div> */}
+        </div>  */}
+       </div>
     </BrowserRouter>
   );
 }
