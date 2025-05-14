@@ -1,9 +1,12 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/no-unknown-property */
 
 import { useState, useEffect } from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-// import Image from "next/image";
-import headerImg from "../assets/img/header-img.svg"; // Make sure this path is valid
 import 'animate.css';
+import TrackVisibility from 'react-on-screen';
 
 const roles = ["Web Developer", "Web Designer", "UI/UX Designer"];
 
@@ -12,6 +15,7 @@ const Banner = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [index, setIndex] = useState(1);
   const period = 2000;
 
   useEffect(() => {
@@ -34,42 +38,44 @@ const Banner = () => {
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
+      setIndex(prevIndex => prevIndex - 1);
       setDelta(period);
     } else if (isDeleting && updatedText === '') {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
+      setIndex(1);
       setDelta(500);
+    } else {
+      setIndex(prevIndex => prevIndex + 1);
     }
   };
 
   return (
-    <section id="home" className="relative w-full h-screen mx-auto flex items-center justify-center px-6">
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 items-center gap-10">
-        <div className="animate__animated animate__fadeIn">
-          <span className="text-green-400 font-medium text-sm uppercase tracking-widest">Welcome to my Portfolio</span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white mt-4">
-            Hi! I&#39;m <span className="text-[#915eff]">Lokesh</span>
-            <br />
-            <span className="block text-2xl sm:text-3xl mt-2 text-white">
-              <span className="text-secondary">{text}</span>
-              <span className="blinking-cursor">|</span>
-            </span>
-          </h1>
-          <p className="mt-4 text-white-100 max-w-xl leading-relaxed">
-            An enthusiastic software engineer crafting performant, user-friendly, and scalable digital experiences.
-          </p>
-          <button
-            onClick={() => console.log("connect")}
-            className="mt-6 inline-flex items-center gap-2 px-5 py-3 border border-secondary text-secondary rounded-xl hover:bg-secondary hover:text-black transition"
-          >
-            Let’s Connect <ArrowRightCircle size={20} />
-          </button>
-        </div>
-
-        <div className="animate__animated animate__zoomIn flex justify-center">
-          <img src={headerImg} alt="Header Image" width={400} height={400} />
-        </div>
-      </div>
+    <section id="home" className="banner">
+      <Container>
+        <Row className="aligh-items-center">
+          <Col xs={12} md={6} xl={7}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                <span className="tagline">Welcome to my Portfolio</span>
+                <h1>{`Hi! I'm Lokesh`} 
+                  <br></br><span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+              </div>}
+            </TrackVisibility>
+          </Col>
+          <Col xs={12} md={6} xl={5}>
+            <TrackVisibility>
+              {({ isVisible }) =>
+                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                  <img src={headerImg} alt="Header Img"/>
+                </div>}
+            </TrackVisibility>
+          </Col>
+        </Row>
+      </Container>
     </section>
   );
 };

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { BrowserRouter } from 'react-router-dom';
 import {
   About,
@@ -9,26 +10,27 @@ import {
   Tech,
   Works
 } from './components';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 import Banner from './components/Banner';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="relative z-0 app">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar/>
+      {/* <div className="relative z-0 app"> */}
+          {/* <Navbar/> */}
           <Banner/>
-        </div>
         <About/>
-        <Experience/>
-        <Tech />
-        <Works/>
-        <Feedbacks/>
-        <div className="relative z-0">
+        {/* <Experience/> */}
+        {/* <Tech /> */}
+        {/* <Works/> */}
+        {/* <Feedbacks/> */}
+        {/* <div className="relative z-0">
           <Contact/>
           <StarsCanvas/>
-        </div>
-      </div>
+        </div> */}
+      {/* </div> */}
     </BrowserRouter>
   );
 }
