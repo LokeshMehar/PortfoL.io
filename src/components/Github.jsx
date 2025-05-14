@@ -64,7 +64,7 @@ function Github() {
           }}
            renderBlock={(block, activity) =>
     React.cloneElement(block, {
-      "data-tooltip-id": "github-tooltip", // ✅ required for v5+
+      "data-tooltip-id": "github-tooltip",
       "data-tooltip-content": `${activity.count} contribution${activity.count !== 1 ? "s" : ""} on ${activity.date}`,
       className: `${block.props.className} github-block`,
     })
