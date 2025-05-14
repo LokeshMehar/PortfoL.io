@@ -32,7 +32,8 @@
     "react-tilt": "^1.0.2",
     "react-tooltip": "^5.28.1",
     "react-vertical-timeline-component": "^3.5.3",
-    "three": "^0.150.1"
+    "three": "^0.150.1",
+    "typewriter-effect": "^2.22.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",

@@ -18,9 +18,10 @@ import Banner from './components/Banner';
 function App() {
   return (
     <BrowserRouter>
-      <div className="relative z-0 app">
-          {/* <Navbar/> */}
+      <div className="App" id={load ? "no-scroll" : "scroll"}>
+          <Navbar/>
           <Banner/>
+      </div>
         <About/>
         <Experience/>
         <Works/>
