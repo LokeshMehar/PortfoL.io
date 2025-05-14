@@ -4,20 +4,20 @@ import {
   Contact,
   Experience,
   Feedbacks,
-  Hero,
   Navbar,
   StarsCanvas,
   Tech,
   Works
 } from './components';
+import Banner from './components/Banner';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary">
+      <div className="relative z-0 app">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar/>
-          <Hero/>
+          <Banner/>
         </div>
         <About/>
         <Experience/>
