@@ -314,15 +314,15 @@ button:focus {
     font-size: 1.4rem !important;
     background-color: rgba(34, 15, 38, 0.8) !important; /* #220f26 with 80% opacity */
     border-radius: 80px !important;
-    height :15vh;
-    margin-top: 0.5em !important;
+    height :20vh;
+    margin-top: 0.5rem !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
-  }
-  .navbar-nav .nav-item a {
+   } 
+  /* .navbar-nav .nav-item a {
     padding: 0.5rem 1rem !important;
-  }
+  }  */
 }
 .navbar-brand {
   color: rgb(250, 250, 250) !important;

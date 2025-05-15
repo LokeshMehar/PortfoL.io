@@ -4,18 +4,20 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 
 export const Projects = () => {
   return (
+    <>
+    
     <SlideIn direction="left">
       <div className="font-sans">
         <div className="text-center mb-7 mx-4">
-          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Featured <span className="text-yellow-400">Projects</span>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Featured <span className="text-purple-600">Projects</span>
           </p>
           <p className="mt-3 font-light text-gray-500">
             Check out my selected projects to see my work in action.
           </p>
         </div>
 
-        <div className="hover:cursor-pointer grid grid-cols-1 gap-8 px-4 py-8 mx-auto max-w-6xl">
+        <div className="hover:cursor-pointer grid grid-cols-1 gap-8 px-4 py-8 mx-auto max-w-6xl bg-emerald-400">
           {projectData.map((project, index) => (
             <div
               key={index}
@@ -77,5 +79,6 @@ export const Projects = () => {
         </div>
       </div>
     </SlideIn>
+    </>
   );
 };
