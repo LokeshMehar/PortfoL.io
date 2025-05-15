@@ -231,13 +231,13 @@ button:focus {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgba(178, 121, 216, 0.959);
-  border-radius: 12px;
+  border-radius: 7px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(222, 130, 235, 0.911);
-  border-radius: 12px;
+  border-radius: 7px;
 }
 
 /* --------- */
@@ -314,11 +314,14 @@ button:focus {
     font-size: 1.4rem !important;
     background-color: rgba(34, 15, 38, 0.8) !important; /* #220f26 with 80% opacity */
     border-radius: 80px !important;
-    height : 20vh;
+    height :15vh;
     margin-top: 0.5em !important;
   }
   .navbar-nav .nav-item a::after {
     display: none !important;
+  }
+  .navbar-nav .nav-item a {
+    padding: 0.5rem 1rem !important;
   }
 }
 .navbar-brand {
@@ -352,7 +355,7 @@ button:focus {
 
 @media (max-width: 767px) {
   .nav-link {
-    padding: 0.7rem 1rem !important;
+    padding: 0.7rem 1rem;
   }
 }
 
