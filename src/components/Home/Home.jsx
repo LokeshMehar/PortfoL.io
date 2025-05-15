@@ -25,12 +25,12 @@ function Home() {
                 <strong className="main-name"> LOKESH MEHAR</strong>
               </h1>
 
-              <div className="pl-[50px] text-left text-fuchsia-400">
+              <div className="pl-[50px] text-left text-fuchsia-400 pb-6">
                 <Type />
               </div>
             </Col>
 
-            <Col md={5} style={{ paddingBottom: 20 }}>
+            <Col md={5} style={{ paddingBottom: 20, }}>
               <img
                 src={homeLogo}
                 alt="home pic"

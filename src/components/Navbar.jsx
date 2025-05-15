@@ -1,4 +1,4 @@
-import { useState } from "react";
+import  { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -39,7 +39,7 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand href="/" className="">
-          <img src={logo} className="img-fluid logo" alt="brand"  />
+          <img src={logo} className="img-fluid logo " alt="brand" />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
