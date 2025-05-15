@@ -20,6 +20,7 @@ function Github() {
           fontWeight: 600,
           fontSize: "2rem",
           fontFamily: "var(--font-sans, 'Segoe UI', sans-serif)",
+          color:"white"
         }}
         data-aos="fade-right"
       >
@@ -32,6 +33,7 @@ function Github() {
         style={{
           padding: "20px",
           borderRadius: "20px",
+          color: "white",
           boxShadow: "0 8px 20px rgba(0, 0, 0, 0.1)",
           display: "flex",
           justifyContent: "center",
