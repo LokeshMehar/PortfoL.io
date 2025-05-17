@@ -18,6 +18,7 @@ export const Projects = () => {
         </div>
 
         <div className="hover:cursor-pointer grid grid-cols-1 gap-8 px-4 py-8 mx-auto max-w-6xl bg-emerald-400">
+          
           {projectData.map((project, index) => (
             <div
               key={index}
