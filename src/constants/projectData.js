@@ -7,7 +7,7 @@ export const projectData = [
         livePreview: "https://appvarsity.vercel.app/",
         caseStudy: "#",
         sourceCode: "https://github.com/somkenemuscle/AppVarsity",
-        image: "../assets/images/ap.jpg",
+        image: "./images/ap.jpg",
     },
     {
         title: "Retweet",
@@ -17,7 +17,7 @@ export const projectData = [
         livePreview: "https://retweet-frontend.vercel.app/",
         caseStudy: "#",
         sourceCode: "https://github.com/somkenemuscle/Retweet-backend",
-        image: "../assets/images/retweet.jpg",
+        image: "./images/retweet.jpg",
     },
     {
         title: "SwiftDocs",
@@ -27,7 +27,7 @@ export const projectData = [
         livePreview: "https://swiftdocs.vercel.app/",
         caseStudy: "#",
         sourceCode: "https://github.com/somkenemuscle/Swift-Docs",
-        image: "../assets/images/sd.jpg",
+        image: "./images/sd.jpg",
     },
 
     {
@@ -38,7 +38,7 @@ export const projectData = [
         livePreview: "https://decorvista.vercel.app/",
         caseStudy: "#",
         sourceCode: "https://github.com/somkenemuscle/decorvista",
-        image: "../assets/images/decor.jpg",
+        image: "./images/decor.jpg",
     },
 
 ];

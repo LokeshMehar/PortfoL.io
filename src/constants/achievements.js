@@ -1,9 +1,9 @@
-// Import any additional assets/images you want to use
+
 import { githuba } from "../assets";
 
 export const achievementsConfig = {
-  githubUsername: "LokeshMehar", // Replace with your GitHub username
-  leetcodeUsername: "leetcode_lokeshm", // Replace with your LeetCode username
+  githubUsername: "LokeshMehar", 
+  leetcodeUsername: "leetcode_lokeshm",
   
   academicDetails: {
     name: "Academic Excellence",
@@ -13,9 +13,9 @@ export const achievementsConfig = {
       { name: "Algorithms", color: "green-text-gradient" },
       { name: "Computer Networks", color: "pink-text-gradient" },
     ],
-    cgpa: "8.5/10", // Replace with your actual CGPA
-    source_link: null, // Add link if applicable
-    icon: githuba, // Replace with appropriate icon
+    cgpa: "8.5/10",
+    source_link: null,
+    icon: githuba,
   },
   
   schoolDetails: {
@@ -26,8 +26,8 @@ export const achievementsConfig = {
       { name: "Science", color: "green-text-gradient" },
       { name: "Competitions", color: "pink-text-gradient" },
     ],
-    source_link: null, // Add link if applicable
-    icon: githuba, // Replace with appropriate icon
+    source_link: null, 
+    icon: githuba,
   },
   
   volunteeringDetails: {
@@ -39,9 +39,7 @@ export const achievementsConfig = {
       { name: "Teaching", color: "green-text-gradient" },
       { name: "Community", color: "pink-text-gradient" },
     ],
-    source_link: null, // Add link if applicable
-    icon: githuba, // Replace with appropriate icon
+    source_link: null, 
+    icon: githuba,
   }
 };
-
-// You can add or modify more details as needed
