@@ -8,7 +8,7 @@ import Particle from "../Particle";
 function Home() {
   return (
     <section>
-      <Container fluid className="home-section" id="home">
+      <Container fluid className="home-section px-0" id="home">
         <Particle />
         <Container className="home-content">
           <Row>

@@ -444,9 +444,18 @@ button:focus {
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
+  background-size: auto; /* Default: use image's natural width */
   padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
+
+/* Only apply background-size: cover when viewport width exceeds image width */
+@media (min-width: 1200px) {
+  .home-section {
+    background-size: cover;
+  }
+}
+
 
 .home-content {
   padding: 7rem 0 2rem !important;
