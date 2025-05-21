@@ -7,6 +7,7 @@ import {
   Feedbacks,
   Navbar,
   StarsCanvas,
+  Projects,
   // Tech,
   Works
 } from './components';
@@ -16,7 +17,6 @@ import './index.css';
 import Preloader from './components/Pre';
 import { useEffect, useState } from 'react';
 import Home from './components/Home/Home';
-import { Projects } from './components/Projects';
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -38,7 +38,7 @@ function App() {
         <About/>
         <Experience/>
         <Projects/>
-        {/* <Works/> */}
+        <Works/>
         <div className="relative z-0">
           <Contact/>
           <StarsCanvas/>
