@@ -38,7 +38,7 @@ function App() {
         <About/>
         <Experience/>
         <Projects/>
-        <Works/>
+        {/* <Works/> */}
         <div className="relative z-0">
           <Contact/>
           <StarsCanvas/>
