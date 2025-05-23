@@ -17,6 +17,7 @@ import './index.css';
 import Preloader from './components/Pre';
 import { useEffect, useState } from 'react';
 import Home from './components/Home/Home';
+import TechStackSections from './components/TechStackSections';
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -39,6 +40,7 @@ function App() {
         <Experience/>
         <Projects/>
         {/* <Works/> */}
+        <TechStackSections/>
         <div className="relative z-0">
           <Contact/>
           <StarsCanvas/>
