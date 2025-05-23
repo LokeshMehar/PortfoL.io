@@ -2,184 +2,113 @@
 /* eslint-disable react/no-unknown-property */
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { SectionWrapper } from '../hoc';
+import { styles } from '../styles';
+import { fadeIn } from '../utils/motion';
+import { frameworksAndLibraries, programmingLanguages, techColors, toolsAndPlatforms } from '../constants/techStack';
 
-// Color mappings for different technologies
-const techColors = {
-  // Programming Languages
-  'JavaScript': '#F7DF1E',
-  'TypeScript': '#3178C6',
-  'Java': '#007396',
-  'Python': '#3776AB',
-  'C++': '#00599C',
-  'C': '#A8B9CC',
-  'SQL': '#E38A00',
-  'Bash': '#4EAA25',
 
-  // Frameworks & Libraries
-  'React.js': '#61DAFB',
-  'Next.js': '#000000',
-  'HTML5': '#E34F26',
-  'CSS3': '#1572B6',
-  'Tailwind CSS': '#06B6D4',
-  'Bootstrap': '#7952B3',
-  'Redux': '#764ABC',
-  'Redux Toolkit': '#764ABC',
-  'Node.js': '#339933',
-  'Express.js': '#000000',
-  'Flask': '#000000',
-  
-  // ... Add colors for other technologies similarly
-};
 
-const TechSection = ({ title, items }) => {
+const TechCarousel = ({ title, items }) => {
   const [isHovered, setIsHovered] = useState(false);
   const duplicatedItems = [...items, ...items];
 
-  const getImageSrc = (tech) => {
-    const formattedName = tech.toLowerCase().replace(/[ .+#]/g, '-');
-    return `/tech-icons/${formattedName}.svg`;
-  };
-
   return (
-    <div className="group relative mb-16">
-      <motion.div
-        className="glass-container relative overflow-hidden p-8"
-        onHoverStart={() => setIsHovered(true)}
-        onHoverEnd={() => setIsHovered(false)}
-      >
-        <h2 className="absolute -top-8 left-8 z-10 text-2xl font-bold text-white/90 mb-4">
+    <motion.div 
+      variants={fadeIn('up', 'spring', 0.5, 1.5)}
+      className="w-full py-8"
+    >
+      <div className="relative glass-container h-[200px] md:h-[250px] overflow-hidden">
+        {/* Section Title */}
+        <h3 className="absolute -top-[1px] -left-[1px] z-10 bg-gradient-to-br from-blue-600/90 to-purple-500/90 text-white text-xl md:text-2xl font-bold px-6 py-3 rounded-br-2xl shadow-lg">
           {title}
-        </h2>
-        
-        <div
-          className={`flex space-x-12 ${
-            isHovered ? 'animation-paused' : 'animate-infinite-scroll'
-          }`}
-          style={{ width: 'max-content' }}
+        </h3>
+
+        {/* Scrolling Items */}
+        <div 
+          className="h-full w-[200%] grid grid-flow-col auto-cols-min gap-8 md:gap-12"
+          style={{ 
+            animation: `${isHovered ? 'none' : 'scroll 40s linear infinite'}`,
+            transform: isHovered ? 'translateX(0)' : ''
+          }}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
         >
-          {duplicatedItems.map((tech, index) => (
+          {[...duplicatedItems, ...duplicatedItems].map((tech, index) => (
             <motion.div
               key={`${tech}-${index}`}
-              className="relative flex items-center justify-center"
+              className="relative flex flex-col items-center justify-center group"
               whileHover={{ scale: 1.1 }}
+              transition={{ type: 'spring', stiffness: 300 }}
             >
               <img
-                src={getImageSrc(tech)}
+                src={`/tech-icons/${tech.toLowerCase().replace(/[ .+#]/g, '-')}.svg`}
                 alt={tech}
-                className="h-16 w-16 object-contain"
+                className="h-14 w-14 md:h-20 md:w-20 object-contain hover:scale-110 transition-transform"
               />
-              <span
-                className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-sm font-medium opacity-0 transition-opacity duration-200 group-hover:opacity-100"
+              <motion.span
+                initial={{ opacity: 0 }}
+                animate={{ opacity: isHovered ? 1 : 0 }}
+                className="absolute bottom-0 translate-y-6 text-sm md:text-base font-medium text-center"
                 style={{ color: techColors[tech] || '#fff' }}
               >
                 {tech}
-              </span>
+              </motion.span>
             </motion.div>
           ))}
         </div>
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 };
 
-const TechStackSections = () => {
-  // Programming Languages - Prioritized for SDE roles
-const programmingLanguages = [
-  "JavaScript",
-  "TypeScript",
-  "Java",
-  "Python",
-  "C++",
-  "C",
-  "SQL",
-  "Bash"
-];
-
-// Frameworks and Libraries - Grouped by frontend, backend, APIs, and databases
-const frameworksAndLibraries = [
-  // Frontend
-  "React.js",
-  "Next.js",
-  "HTML5",
-  "CSS3",
-  "Tailwind CSS",
-  "Bootstrap",
-  "Redux",
-  "Redux Toolkit",
-
-  // Backend
-  "Node.js",
-  "Express.js",
-  "Flask",
-
-  // APIs & Utilities
-  "REST",
-  "GraphQL",
-  "Axios",
-  "Postman",
-
-  // Databases & ORMs
-  "PostgreSQL",
-  "MongoDB",
-  "MySQL",
-  "Prisma"
-];
-
-// Tools and Platforms - Ordered by relevance to dev workflow and SDE job requirements
-const toolsAndPlatforms = [
-  "GitHub",
-  "GitLab",
-  "VS Code",
-  "Linux",
-  "Docker",
-  "Kubernetes",
-  "CI/CD",
-  "AWS",
-  "GCP",
-  "Vercel",
-  "NGINX",
-  "PgAdmin",
-  "MongoDB Compass",
-  "Figma"
-];
-
-
+const TechStack = () => {
   return (
-    <div className="min-h-screen p-8 bg-gradient-to-br from-gray-900 to-blue-900">
-      
+    <div className="w-full max-w-7xl mx-auto px-4">
+      <motion.div
+        variants={fadeIn('', '', 0.1, 1)}
+        className="flex-1"
+      >
+        <p className={styles.sectionSubText}>Technical Expertise</p>
+        <h2 className={styles.sectionHeadText}>Tech Stack.</h2>
+
+        <div className="mt-12 space-y-8 md:space-y-12">
+          <TechCarousel
+            title="Programming Languages"
+            items={programmingLanguages}
+          />
+          <TechCarousel
+            title="Frameworks & Libraries"
+            items={frameworksAndLibraries}
+          />
+          <TechCarousel
+            title="Tools & Platforms"
+            items={toolsAndPlatforms}
+          />
+        </div>
+      </motion.div>
+
       <style jsx global>{`
         @keyframes scroll {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
         }
-        .animate-infinite-scroll {
-          animation: scroll 20s linear infinite;
-        }
-        .animation-paused {
-          animation-play-state: paused;
-        }
+        
         .glass-container {
-          background: rgba(255, 255, 255, 0.1);
-          backdrop-filter: blur(12px);
+          background: rgba(255, 255, 255, 0.05);
+          backdrop-filter: blur(16px);
           border-radius: 1.5rem;
-          border: 1px solid rgba(255, 255, 255, 0.2);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        }
+
+        .tech-scroll {
+          animation: scroll 40s linear infinite;
+          will-change: transform;
         }
       `}</style>
-
-      <TechSection
-        title="Programming Languages"
-        items={programmingLanguages}
-      />
-      <TechSection
-        title="Frameworks & Libraries"
-        items={frameworksAndLibraries}
-      />
-      <TechSection
-        title="Tools & Platforms"
-        items={toolsAndPlatforms}
-      />
     </div>
   );
 };
 
-export default TechStackSections;
+export default SectionWrapper(TechStack, "tech");
