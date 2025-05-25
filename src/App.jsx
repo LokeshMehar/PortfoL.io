@@ -33,18 +33,18 @@ function App() {
     <BrowserRouter>
     <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
-          {/* <Navbar/>
+          <Navbar/>
           <Home/>
       
         <About/>
         <Experience/>
-        <Projects/> */}
+        <Projects/>
         {/* <Works/> */}
         <TechStackSections/>
-        {/* <div className="relative z-0">
+        <div className="relative z-0">
           <Contact/>
           <StarsCanvas/>
-        </div>  */}
+        </div> 
         </div>
        
     </BrowserRouter>
