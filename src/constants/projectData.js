@@ -1,44 +1,46 @@
 export const projectData = [
     {
-        title: "Appvarsity",
+        title: "OctoWrap",
         description:
-            "A platform dedicated to bridging the gap in information and resources for Aptech students by providing them with essential tools and support tailored to their needs. ",
-        technologies: ["React","Next.js", "MongoDB", "Tailwind", "Express.js", "Typescript"],
-        livePreview: "https://appvarsity.vercel.app/",
+            "A creative and fun real-world application that lets users design and order custom mobile covers for their specific phones. Features extensive customization options with various colors, materials, and designs. Integrated with Stripe for seamless payments and utilizes webhooks for event-driven functionality and order processing.",
+        technologies: ["Next.js", "React", "Stripe" , "PostgreSQL", "Tailwind", "Prisma"],
+        livePreview: "https://octowrap.vercel.app/",
         caseStudy: "#",
-        sourceCode: "https://github.com/somkenemuscle/AppVarsity",
-        image: "./images/ap.jpg",
+        sourceCode: "https://github.com/yourusername/octowrap",
+        image: "./images/octowrap.jpg",
+        icon: "📱", // Mobile/phone icon for custom covers
     },
     {
-        title: "Retweet",
+        title: "WealthCurve",
         description:
-            "A fun and interactive social media platform designed for sharing posts and connecting with friends, built specifically for my school or any community and friends to create our very own online hangout space! 😂",
-        technologies: ["React","Tailwind", "Next.js", "Typescript", "Express.js", "MongoDb"],
-        livePreview: "https://retweet-frontend.vercel.app/",
+            "An advanced investment platform that forecasts stock market trends using machine learning-based linear regression models trained on historical data. Features comprehensive market analysis with rich data visualization through various interactive charts and graphs, helping investors make data-driven investment decisions.",
+        technologies: ["React", "Express.js", "Material-UI","MongoDB", "Redux", "Node.js", "Mongoose"],
+        livePreview: "https://wealthcurve.vercel.app/",
         caseStudy: "#",
-        sourceCode: "https://github.com/somkenemuscle/Retweet-backend",
-        image: "./images/retweet.jpg",
+        sourceCode: "https://github.com/yourusername/wealthcurve",
+        image: "./images/wealthcurve.jpg",
+        icon: "📈", // Chart/growth icon for financial app
     },
     {
-        title: "SwiftDocs",
+        title: "Xpenso",
         description:
-            "A live document collaboration application that allows users worldwide to share a common space and exchange innovative ideas seamlessly.",
-        technologies: ["React","Tailwind", "MongoDb", "Express.js", "Typescript"],
-        livePreview: "https://swiftdocs.vercel.app/",
+            "A comprehensive expense management service with multi-user authentication and personalized account systems. Users can track spending by dates and categories, create custom spending categories, and get forecasting insights based on their financial patterns. Each user maintains their private financial dashboard with detailed expense analytics.",
+        technologies: ["Next.js", "TypeScript", "Tailwind", "Prisma", "Zod", "Clerk", "shadcn/ui"],
+        livePreview: "https://xpenso.vercel.app/",
         caseStudy: "#",
-        sourceCode: "https://github.com/somkenemuscle/Swift-Docs",
-        image: "./images/sd.jpg",
+        sourceCode: "https://github.com/yourusername/xpenso",
+        image: "./images/xpenso.jpg",
+        icon: "💰", // Money icon for expense tracking
     },
-
     {
-        title: "Decorvista",
+        title: "DermaDetect",
         description:
-            "An e-commerce platform that allows users to shop for home design appliances and connect with interior designers, creating a collaborative space to showcase and explore innovative designs.",
-        technologies: ["React", "Bootstrap", "Javascript", "Express.js", "MongoDb"],
-        livePreview: "https://decorvista.vercel.app/",
+            "A Deep Neural Network-enhanced research implementation for medical image analysis. Users can upload skin images to detect cancerous or abnormal conditions using advanced AI models. Features image segmentation, scalable API architecture, and separate frontend-backend systems for processing heavy deep learning frameworks with high accuracy medical predictions.",
+        technologies: ["Python", "TensorFlow", "Keras", "Flask", "React", "Tailwind"],
+        livePreview: "https://dermadetect.vercel.app/",
         caseStudy: "#",
-        sourceCode: "https://github.com/somkenemuscle/decorvista",
-        image: "./images/decor.jpg",
+        sourceCode: "https://github.com/yourusername/dermadetect",
+        image: "./images/dermadetect.jpg",
+        icon: "🔬", // Microscope icon for medical/detection app
     },
-
 ];
