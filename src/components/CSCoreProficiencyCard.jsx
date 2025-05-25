@@ -17,7 +17,7 @@ const CSCoreProficiencyCard = () => (
       </div>
     }
   >
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-4">
       {/* Education Summary */}
       <div>
         <h3 className="text-white text-[24px] font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -25,45 +25,37 @@ const CSCoreProficiencyCard = () => (
         </h3>
         <ul className="list-disc list-inside text-[14px] text-gray-100 space-y-2 pl-2">
           <li className="leading-relaxed">
-            <span className="text-blue-300">2022–2027 Batch</span> | Integrated B.Tech + M.Tech in IT @ 
-            <span className="font-bold text-yellow-400 ml-1">ABV-IIITM Gwalior</span> | 
+            <span className="text-blue-300">2022–2027 Batch</span> | Integrated B.Tech + M.Tech in IT
+          </li>
+          <li className="leading-relaxed">
+            <span className="font-bold text-yellow-400">ABV-IIITM Gwalior</span> | 
             <span className="text-green-400 font-semibold ml-1">CGPA: 7.84</span>
           </li>
-        </ul>
-      </div>
-
-      {/* Subjects */}
-      <div>
-        <h4 className="text-white font-bold mb-2 text-[16px] flex items-center">
-          <span className="mr-2">📚</span>
-          Technical Subjects Covered
-        </h4>
-        <ul className="list-disc list-inside text-[14px] text-gray-100 space-y-2 pl-2">
           <li className="leading-relaxed">
-            <span className="text-cyan-300 font-medium">DSA, OOP, DBMS</span>, Operating Systems
-          </li>
-          <li className="leading-relaxed">
-            <span className="text-purple-300 font-medium">Computer Networks, COA</span>, Software Engineering
+            Core subjects: <span className="text-cyan-300 font-medium">DSA, OOP, DBMS, OS, Networks, COA</span>
           </li>
         </ul>
       </div>
 
       {/* Research & Applied Work */}
       <div className="border-t border-gray-600/50 pt-4 text-[14px] text-gray-200">
-        <h4 className="text-white font-bold mb-3 text-[16px] flex items-center">
-          <span className="mr-2">🔬</span>
+        <h4 className="text-white font-bold mb-3 text-[16px]">
           Applied Learning & Research
         </h4>
-        <ul className="list-none space-y-2 pl-0">
-          <li className="flex items-start">
-            <span className="mr-3 mt-1 text-sm">🧠</span>
-            Implemented research papers on <span className="text-green-300 font-medium">skin cancer & brain tumor detection</span> using DNNs, and hybrid segmentation
-          </li>
-          <li className="flex items-start">
-            <span className="mr-3 mt-1 text-sm">🏗️</span>
-            Developed <span className="text-blue-300 font-medium">production-grade applications</span> based on research insights, adhering to industry-standard software engineering practices
-          </li>
-        </ul>
+        <div className="grid grid-cols-1 gap-3">
+          <div>
+            <h5 className="text-green-300 font-semibold mb-1 text-sm">Medical AI Research</h5>
+            <p className="text-xs leading-relaxed">
+              Implemented research papers on skin cancer & brain tumor detection using DNNs and hybrid segmentation techniques
+            </p>
+          </div>
+          <div>
+            <h5 className="text-blue-300 font-semibold mb-1 text-sm">Production Development</h5>
+            <p className="text-xs leading-relaxed">
+              Developed production-grade applications based on research insights, following industry-standard software engineering practices
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </VerticalTimelineElement>

@@ -53,25 +53,24 @@ const ExperienceCardDSA = () => (
     </div>
 
     {/* Bottom Section: Highlights */}
-    <div className="mt-6 border-t border-gray-600/50 pt-5 text-[14px] text-gray-200">
-      <h4 className="text-white font-bold mb-3 text-[16px] flex items-center">
-        <span className="mr-2">🏆</span>
+    <div className="mt-4 border-t border-gray-600/50 pt-4 text-[14px] text-gray-200">
+      <h4 className="text-white font-bold mb-3 text-[16px]">
         Contest & Topic Highlights
       </h4>
-      <ul className="list-none space-y-2 pl-0">
-        <li className="flex items-center">
-          <span className="mr-3 text-lg">🏆</span>
-          Highest Rating: <span className="text-yellow-400 font-bold ml-1">1853 (LeetCode)</span>
-        </li>
-        <li className="flex items-center">
-          <span className="mr-3 text-lg">🎖</span>
-          <span className="font-bold text-orange-400">Knight</span> Badge on LeetCode
-        </li>
-        <li className="flex items-center">
-          <span className="mr-3 text-lg">🧠</span>
-          Advanced: <span className="text-cyan-300 font-medium">DP, Segment Trees, Graphs, Bitmasking</span>
-        </li>
-      </ul>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div className="text-center">
+          <div className="text-yellow-400 font-bold text-lg">1853</div>
+          <div className="text-xs text-gray-400">Highest Rating (LeetCode)</div>
+        </div>
+        <div className="text-center">
+          <div className="text-orange-400 font-bold text-lg">Knight</div>
+          <div className="text-xs text-gray-400">Badge on LeetCode</div>
+        </div>
+        <div className="text-center">
+          <div className="text-cyan-300 font-medium text-sm">DP, Graphs, Trees</div>
+          <div className="text-xs text-gray-400">Advanced Topics</div>
+        </div>
+      </div>
     </div>
   </VerticalTimelineElement>
 );

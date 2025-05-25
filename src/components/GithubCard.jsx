@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 
-const GitHubCard = ({ contributionCount = 365 }) => (
+const GitHubCard = ({ contributionCount = 702 }) => (
   <VerticalTimelineElement
     contentStyle={{ 
       background: 'linear-gradient(135deg, #1d1836 0%, #232946 100%)', 
@@ -21,11 +22,11 @@ const GitHubCard = ({ contributionCount = 365 }) => (
       </div>
     }
   >
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-4">
       {/* Summary Section */}
       <div>
         <h3 className="text-white text-[24px] font-bold mb-3 bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
-          Efficient GitHub Usage
+          GitHub & Version Control
         </h3>
         <ul className="list-disc list-inside text-[14px] text-gray-100 space-y-2 pl-2">
           <li className="leading-relaxed">
@@ -42,36 +43,28 @@ const GitHubCard = ({ contributionCount = 365 }) => (
 
       {/* Feature Highlights */}
       <div className="border-t border-gray-600/50 pt-4 text-[14px] text-gray-200">
-        <h4 className="text-white font-bold mb-3 text-[16px] flex items-center">
-          <span className="mr-2">⚙️</span>
+        <h4 className="text-white font-bold mb-3 text-[16px]">
           Key Practices & Tools
         </h4>
-        <ul className="space-y-2 list-none pl-0">
-          <li className="flex items-start">
-            <span className="mr-3 mt-1 text-sm">🔧</span>
-            <span>Daily usage of commands: 
-              <code className="bg-gray-800 text-cyan-300 px-2 py-1 rounded text-sm mx-1">git rebase</code>
-              <code className="bg-gray-800 text-cyan-300 px-2 py-1 rounded text-sm mx-1">git cherry-pick</code>
-              <code className="bg-gray-800 text-cyan-300 px-2 py-1 rounded text-sm mx-1">git stash</code>
-            </span>
-          </li>
-          <li className="flex items-start">
-            <span className="mr-3 mt-1 text-sm">🚀</span>
-            Implemented <span className="text-yellow-300 font-medium">CI/CD via GitHub Actions</span>
-          </li>
-          <li className="flex items-start">
-            <span className="mr-3 mt-1 text-sm">📝</span>
-            Maintained clean commit history with <span className="text-green-300">conventional commits</span>
-          </li>
-          <li className="flex items-start">
-            <span className="mr-3 mt-1 text-sm">🔍</span>
-            Reviewed and managed <span className="text-blue-300">pull requests</span> using best practices
-          </li>
-          <li className="flex items-start">
-            <span className="mr-3 mt-1 text-sm">📊</span>
-            Familiar with <span className="text-purple-300">GitHub Insights</span> for repository analytics
-          </li>
-        </ul>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <h5 className="text-cyan-300 font-semibold mb-2 text-sm">Command Line Expertise</h5>
+            <div className="space-y-1">
+              <code className="bg-gray-800 text-cyan-300 px-2 py-1 rounded text-xs block">git rebase</code>
+              <code className="bg-gray-800 text-cyan-300 px-2 py-1 rounded text-xs block">git cherry-pick</code>
+              <code className="bg-gray-800 text-cyan-300 px-2 py-1 rounded text-xs block">git stash</code>
+            </div>
+          </div>
+          <div>
+            <h5 className="text-yellow-300 font-semibold mb-2 text-sm">Workflow Management</h5>
+            <ul className="text-xs space-y-1">
+              <li>• CI/CD via GitHub Actions</li>
+              <li>• Conventional commit standards</li>
+              <li>• Pull request reviews</li>
+              <li>• Repository analytics</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </VerticalTimelineElement>
