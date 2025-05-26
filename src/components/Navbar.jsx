@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { CgGitFork, CgFileDocument } from "react-icons/cg";
 import logo from "../assets/logo.png";
 import { ImBlog } from "react-icons/im";
-import { AiFillStar, AiOutlineHome, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
+import { AiFillStar,  AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,7 @@ function NavBar() {
   }, []);
 
   const navItems = [
-    { path: "/about", icon: AiOutlineUser, text: "About" },
+    { path: "#about", icon: AiOutlineUser, text: "About" },
     { path: "/project", icon: AiOutlineFundProjectionScreen, text: "Projects" },
     { path: "/resume", icon: CgFileDocument, text: "Resume" },
     { href: "https://soumyajitblogs.vercel.app/", icon: ImBlog, text: "Blogs" },
@@ -53,7 +53,7 @@ function NavBar() {
             {/* GitHub Button */}
             <a
               href="https://github.com/soumyajit4419/Portfolio"
-              target="_blank"
+              target="#about"
               rel="noreferrer"
               className="ml-4 px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-colors text-white text-sm font-medium no-underline flex items-center"
             >

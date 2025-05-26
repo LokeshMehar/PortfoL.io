@@ -11,7 +11,7 @@ import myImg from '../assets/about.png'; // Ensure correct path
 const About = () => {
   return (
     <>
-      <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-12 ">
+      <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-12 " id='about'>
         {/* Text Block */}
         <motion.div
           variants={fadeIn('', '', 0.1, 1)}
