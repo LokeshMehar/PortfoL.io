@@ -3,10 +3,11 @@ import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 const CoCurricularHighlightsCard = () => (
   <VerticalTimelineElement
     contentStyle={{ 
-      background: 'linear-gradient(135deg, #1d1836 0%, #232946 100%)', 
+      background: 'rgba(147, 51, 234, 0.1)', 
       color: '#fff',
+      border: '1px solid rgba(147, 51, 234, 0.4)',
       borderRadius: '12px',
-      boxShadow: '0 8px 32px rgba(31, 38, 135, 0.37)'
+      boxShadow: '0 8px 25px rgba(147, 51, 234, 0.3)'
     }}
     contentArrowStyle={{ borderRight: '7px solid #232631' }}
     date="Beyond the Classroom"

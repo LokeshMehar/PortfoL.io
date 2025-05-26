@@ -4,10 +4,11 @@ import DSAStatCircle from "./DsaStatCircle";
 const ExperienceCardDSA = () => (
   <VerticalTimelineElement
     contentStyle={{ 
-      background: 'linear-gradient(135deg, #1d1836 0%, #232946 100%)', 
+      background: 'rgba(147, 51, 234, 0.1)', 
       color: '#fff',
+      border: '1px solid rgba(147, 51, 234, 0.4)',
       borderRadius: '12px',
-      boxShadow: '0 8px 32px rgba(31, 38, 135, 0.37)'
+      boxShadow: '0 8px 25px rgba(147, 51, 234, 0.3)'
     }}
     contentArrowStyle={{ borderRight: '7px solid #232631' }}
     date="DSA & Problem Solving"
@@ -27,7 +28,7 @@ const ExperienceCardDSA = () => (
       {/* Left: SVG Stats */}
       <div className="flex flex-col items-center md:items-start md:w-3/4">
         <DSAStatCircle />
-        <p className="text-sm text-gray-400 mt-3 font-medium self-center tracking-wide">LeetCode Stats</p>
+        <p className="text-sm text-gray-400 mt-3 font-medium self-center tracking-wide ">LeetCode Stats</p>
       </div>
 
       {/* Right: Short Points */}
@@ -57,20 +58,17 @@ const ExperienceCardDSA = () => (
       <h4 className="text-white font-bold mb-3 text-[16px]">
         Contest & Topic Highlights
       </h4>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-        <div className="text-center">
-          <div className="text-yellow-400 font-bold text-lg">1853</div>
-          <div className="text-xs text-gray-400">Highest Rating (LeetCode)</div>
-        </div>
-        <div className="text-center">
-          <div className="text-orange-400 font-bold text-lg">Knight</div>
-          <div className="text-xs text-gray-400">Badge on LeetCode</div>
-        </div>
-        <div className="text-center">
-          <div className="text-cyan-300 font-medium text-sm">DP, Graphs, Trees</div>
-          <div className="text-xs text-gray-400">Advanced Topics</div>
-        </div>
-      </div>
+      <ul className="list-disc list-inside text-[14px] text-gray-100 space-y-2 pl-2">
+        <li className="leading-relaxed">
+          Achieved <span className="text-yellow-400 font-bold">1853 highest rating</span> on LeetCode
+        </li>
+        <li className="leading-relaxed">
+          Earned <span className="text-orange-400 font-bold">Knight badge</span> on LeetCode platform
+        </li>
+        <li className="leading-relaxed">
+          Specialized in <span className="text-cyan-300 font-medium">DP, Graphs, Trees</span> advanced topics
+        </li>
+      </ul>
     </div>
   </VerticalTimelineElement>
 );

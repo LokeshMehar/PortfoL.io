@@ -4,10 +4,11 @@ import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 const GitHubCard = ({ contributionCount = 702 }) => (
   <VerticalTimelineElement
     contentStyle={{ 
-      background: 'linear-gradient(135deg, #1d1836 0%, #232946 100%)', 
+      background: 'rgba(147, 51, 234, 0.1)', 
       color: '#fff',
+      border: '1px solid rgba(147, 51, 234, 0.4)',
       borderRadius: '12px',
-      boxShadow: '0 8px 32px rgba(31, 38, 135, 0.37)'
+      boxShadow: '0 8px 25px rgba(147, 51, 234, 0.3)'
     }}
     contentArrowStyle={{ borderRight: '7px solid #232631' }}
     date="GitHub & Version Control"
@@ -46,25 +47,20 @@ const GitHubCard = ({ contributionCount = 702 }) => (
         <h4 className="text-white font-bold mb-3 text-[16px]">
           Key Practices & Tools
         </h4>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div>
-            <h5 className="text-cyan-300 font-semibold mb-2 text-sm">Command Line Expertise</h5>
-            <div className="space-y-1">
-              <code className="bg-gray-800 text-cyan-300 px-2 py-1 rounded text-xs block">git rebase</code>
-              <code className="bg-gray-800 text-cyan-300 px-2 py-1 rounded text-xs block">git cherry-pick</code>
-              <code className="bg-gray-800 text-cyan-300 px-2 py-1 rounded text-xs block">git stash</code>
-            </div>
-          </div>
-          <div>
-            <h5 className="text-yellow-300 font-semibold mb-2 text-sm">Workflow Management</h5>
-            <ul className="text-xs space-y-1">
-              <li>• CI/CD via GitHub Actions</li>
-              <li>• Conventional commit standards</li>
-              <li>• Pull request reviews</li>
-              <li>• Repository analytics</li>
-            </ul>
-          </div>
-        </div>
+        <ul className="list-disc list-inside text-[14px] text-gray-100 space-y-2 pl-2">
+          <li className="leading-relaxed">
+            Expert in <span className="text-cyan-300 font-semibold">git rebase, cherry-pick, stash</span> command line operations
+          </li>
+          <li className="leading-relaxed">
+            Implemented <span className="text-yellow-300 font-medium">CI/CD via GitHub Actions</span> for automated workflows
+          </li>
+          <li className="leading-relaxed">
+            Follow <span className="text-purple-300">conventional commit standards</span> and pull request reviews
+          </li>
+          <li className="leading-relaxed">
+            Utilize <span className="text-blue-300">repository analytics</span> for project insights and optimization
+          </li>
+        </ul>
       </div>
     </div>
   </VerticalTimelineElement>
