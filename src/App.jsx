@@ -4,12 +4,9 @@ import {
   About,
   Contact,
   Experience,
-  Feedbacks,
   Navbar,
   StarsCanvas,
   Projects,
-  // Tech,
-  Works
 } from './components';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -39,7 +36,6 @@ function App() {
         <About/>
         <Experience/>
         <Projects/>
-        {/* <Works/> */}
         <TechStackSections/>
         <div className="relative z-0">
           <Contact/>

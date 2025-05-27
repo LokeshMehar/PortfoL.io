@@ -11,7 +11,7 @@ const CoCurricularHighlightsCard = () => (
     }}
     contentArrowStyle={{ borderRight: '7px solid #232631' }}
     date="Beyond the Classroom"
-    iconStyle={{ background: '#232631', color: '#fff', boxShadow: '0 4px 20px rgba(0,0,0,0.3)' }}
+    iconStyle={{ background: '#2c1f3e', color: '#fff', boxShadow: '0 4px 20px rgba(0,0,0,0.3)',border: '1px solid rgba(147, 51, 234, 0.4)' }}
     icon={
       <div className="flex justify-center items-center w-full h-full text-white text-2xl">
         🧑‍💼
