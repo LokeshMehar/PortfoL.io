@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { CgGitFork, CgFileDocument } from "react-icons/cg";
 import logo from "../assets/logo.png";
 import { ImBlog } from "react-icons/im";
-import { AiFillStar,  AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
+import { AiFillStar, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,11 +15,23 @@ function NavBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleSmoothScroll = (e, targetId) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+    setIsOpen(false);
+  };
+
   const navItems = [
-    { path: "#about", icon: AiOutlineUser, text: "About" },
-    { path: "/project", icon: AiOutlineFundProjectionScreen, text: "Projects" },
-    { path: "/resume", icon: CgFileDocument, text: "Resume" },
-    { href: "https://soumyajitblogs.vercel.app/", icon: ImBlog, text: "Blogs" },
+    { id: "about", icon: AiOutlineUser, text: "About", type: "scroll" },
+    { id: "project", icon: AiOutlineFundProjectionScreen, text: "Projects", type: "scroll" },
+    { path: "/resume", icon: CgFileDocument, text: "Resume", type: "route" },
+    { href: "https://soumyajitblogs.vercel.app/", icon: ImBlog, text: "Blogs", type: "external" },
   ];
 
   return (
@@ -35,25 +47,53 @@ function NavBar() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
-            {navItems.map((item, index) => (
-              <Link
-                key={index}
-                to={item.path || ""}
-                href={item.href}
-                className="group relative text-white px-4 py-2 text-[16px] lg:text-[18px] no-underline font-medium hover:text-purple-300 transition-colors"
-                target={item.href ? "_blank" : undefined}
-                rel={item.href ? "noreferrer" : undefined}
-              >
-                <item.icon className="inline mr-2 mb-1 no-underline" />
-                {item.text}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-purple-400 w-0 group-hover:w-[calc(100%-16px)] transition-all duration-300" />
-              </Link>
-            ))}
+            {navItems.map((item, index) => {
+              if (item.type === "route") {
+                return (
+                  <Link
+                    key={index}
+                    to={item.path}
+                    className="group relative text-white px-4 py-2 text-[16px] lg:text-[18px] no-underline font-medium hover:text-purple-300 transition-colors"
+                  >
+                    <item.icon className="inline mr-2 mb-1 no-underline" />
+                    {item.text}
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-purple-400 w-0 group-hover:w-[calc(100%-16px)] transition-all duration-300" />
+                  </Link>
+                );
+              } else if (item.type === "external") {
+                return (
+                  <a
+                    key={index}
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group relative text-white px-4 py-2 text-[16px] lg:text-[18px] no-underline font-medium hover:text-purple-300 transition-colors"
+                  >
+                    <item.icon className="inline mr-2 mb-1 no-underline" />
+                    {item.text}
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-purple-400 w-0 group-hover:w-[calc(100%-16px)] transition-all duration-300" />
+                  </a>
+                );
+              } else {
+                return (
+                  <a
+                    key={index}
+                    href={`#${item.id}`}
+                    onClick={(e) => handleSmoothScroll(e, item.id)}
+                    className="group relative text-white px-4 py-2 text-[16px] lg:text-[18px] no-underline font-medium hover:text-purple-300 transition-colors"
+                  >
+                    <item.icon className="inline mr-2 mb-1 no-underline" />
+                    {item.text}
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] bg-purple-400 w-0 group-hover:w-[calc(100%-16px)] transition-all duration-300" />
+                  </a>
+                );
+              }
+            })}
             
             {/* GitHub Button */}
             <a
               href="https://github.com/soumyajit4419/Portfolio"
-              target="#about"
+              target="_blank"
               rel="noreferrer"
               className="ml-4 px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-colors text-white text-sm font-medium no-underline flex items-center"
             >
@@ -79,20 +119,47 @@ function NavBar() {
         {/* Mobile Navigation */}
         <div className={`md:hidden overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? 'max-h-[100vh]' : 'max-h-0'}`}>
           <div className="px-4 pb-6 pt-4 space-y-3 bg-[#220f26e6] backdrop-blur-2xl rounded-3xl m-2 mt-4">
-            {navItems.map((item, index) => (
-              <Link
-                key={index}
-                to={item.path || ""}
-                href={item.href}
-                className="flex items-center px-6 py-4 text-white rounded-xl hover:bg-purple-500/30 transition-colors text-lg"
-                onClick={() => setIsOpen(false)}
-                target={item.href ? "_blank" : undefined}
-                rel={item.href ? "noreferrer" : undefined}
-              >
-                <item.icon className="mr-4" size={24} />
-                {item.text}
-              </Link>
-            ))}
+            {navItems.map((item, index) => {
+              if (item.type === "route") {
+                return (
+                  <Link
+                    key={index}
+                    to={item.path}
+                    className="flex items-center px-6 py-4 text-white rounded-xl hover:bg-purple-500/30 transition-colors text-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <item.icon className="mr-4" size={24} />
+                    {item.text}
+                  </Link>
+                );
+              } else if (item.type === "external") {
+                return (
+                  <a
+                    key={index}
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center px-6 py-4 text-white rounded-xl hover:bg-purple-500/30 transition-colors text-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <item.icon className="mr-4" size={24} />
+                    {item.text}
+                  </a>
+                );
+              } else {
+                return (
+                  <a
+                    key={index}
+                    href={`#${item.id}`}
+                    onClick={(e) => handleSmoothScroll(e, item.id)}
+                    className="flex items-center px-6 py-4 text-white rounded-xl hover:bg-purple-500/30 transition-colors text-lg"
+                  >
+                    <item.icon className="mr-4" size={24} />
+                    {item.text}
+                  </a>
+                );
+              }
+            })}
             
             {/* Mobile GitHub Button */}
             <a
@@ -100,6 +167,7 @@ function NavBar() {
               target="_blank"
               rel="noreferrer"
               className="flex items-center px-6 py-4 text-white rounded-xl hover:bg-purple-500/30 transition-colors text-lg"
+              onClick={() => setIsOpen(false)}
             >
               <CgGitFork className="mr-4" size={24} />
               <AiFillStar className="mr-4" size={22} />
