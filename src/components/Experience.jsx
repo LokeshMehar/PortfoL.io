@@ -37,6 +37,7 @@ const Experience = () => {
           ))} */}
         </VerticalTimeline>
       </div>
+      <div id="project"></div>
     </>
   );
 };

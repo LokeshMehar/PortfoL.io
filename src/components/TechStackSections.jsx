@@ -20,6 +20,7 @@ const TechStack = () => {
           <TechCarousel title="Tools & Platforms" items={toolsAndPlatforms} />
         </div>
       </motion.div>
+      <div id="contact"></div>
     </div>
   );
 };

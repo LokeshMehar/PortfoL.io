@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { CgGitFork, CgFileDocument } from "react-icons/cg";
+import { CgFileDocument } from "react-icons/cg";
 import logo from "../assets/logo.png";
-import { ImBlog } from "react-icons/im";
-import { AiFillStar, AiOutlineFundProjectionScreen, AiOutlineUser } from "react-icons/ai";
+import {  AiOutlineFundProjectionScreen, AiOutlineUser, AiOutlineMail } from "react-icons/ai";
 
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +30,6 @@ function NavBar() {
     { id: "about", icon: AiOutlineUser, text: "About", type: "scroll" },
     { id: "project", icon: AiOutlineFundProjectionScreen, text: "Projects", type: "scroll" },
     { path: "/resume", icon: CgFileDocument, text: "Resume", type: "route" },
-    { href: "https://soumyajitblogs.vercel.app/", icon: ImBlog, text: "Blogs", type: "external" },
   ];
 
   return (
@@ -90,45 +88,44 @@ function NavBar() {
               }
             })}
             
-            {/* GitHub Button */}
+            {/* Contact Button */}
             <a
-              href="https://github.com/soumyajit4419/Portfolio"
-              target="_blank"
-              rel="noreferrer"
+              href="#contact"
+              onClick={(e) => handleSmoothScroll(e, "contact")}
               className="ml-4 px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-colors text-white text-sm font-medium no-underline flex items-center"
             >
-              <CgGitFork className="mr-2" size={18} />
-              <AiFillStar className="mr-2" size={16} />
-              <span className="hidden lg:inline">Fork on Github</span>
+              <AiOutlineMail className="mr-2" size={18} />
+              <span className="hidden lg:inline">Contact Me</span>
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-3 rounded-full transition-all duration-300"
+            className="md:hidden p-2 transition-all duration-300"
           >
-            <div className="w-8 h-8 relative flex items-center justify-center text-white">
-              <span className={`absolute block h-[2px] w-6 bg-current transform transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-0' : '-translate-y-1.5'}`} />
-              <span className={`absolute block h-[2px] w-6 bg-current transition-all duration-300 ${isOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}`} />
-              <span className={`absolute block h-[2px] w-6 bg-current transform transition-all duration-300 ${isOpen ? '-rotate-45 translate-y-0' : 'translate-y-1.5'}`} />
+            <div className="w-6 h-6 relative flex items-center justify-center text-white">
+              <span className={`absolute block h-[2px] w-5 bg-current transform transition-all duration-300 ${isOpen ? 'rotate-45 translate-y-0' : '-translate-y-1.5'}`} />
+              <span className={`absolute block h-[2px] w-5 bg-current transition-all duration-300 ${isOpen ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}`} />
+              <span className={`absolute block h-[2px] w-5 bg-current transform transition-all duration-300 ${isOpen ? '-rotate-45 translate-y-0' : 'translate-y-1.5'}`} />
             </div>
           </button>
         </div>
 
         {/* Mobile Navigation */}
-        <div className={`md:hidden overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? 'max-h-[100vh]' : 'max-h-0'}`}>
-          <div className="px-4 pb-6 pt-4 space-y-3 bg-[#220f26e6] backdrop-blur-2xl rounded-3xl m-2 mt-4">
+        <div className={`md:hidden overflow-hidden transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] ${isOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="px-4 pb-6 pt-4 space-y-2 bg-[#220f26e6] backdrop-blur-2xl rounded-2xl m-2 mt-4">
             {navItems.map((item, index) => {
               if (item.type === "route") {
                 return (
                   <Link
                     key={index}
                     to={item.path}
-                    className="flex items-center px-6 py-4 text-white rounded-xl hover:bg-purple-500/30 transition-colors text-lg"
+                    className="flex items-center px-4 py-3 text-white rounded-xl hover:bg-purple-500/20 transition-colors text-base font-medium"
                     onClick={() => setIsOpen(false)}
+                    style={{ textDecoration: 'none' }}
                   >
-                    <item.icon className="mr-4" size={24} />
+                    <item.icon className="mr-3" size={20} />
                     {item.text}
                   </Link>
                 );
@@ -139,10 +136,11 @@ function NavBar() {
                     href={item.href}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center px-6 py-4 text-white rounded-xl hover:bg-purple-500/30 transition-colors text-lg"
+                    className="flex items-center px-4 py-3 text-white rounded-xl hover:bg-purple-500/20 transition-colors text-base font-medium"
                     onClick={() => setIsOpen(false)}
+                    style={{ textDecoration: 'none' }}
                   >
-                    <item.icon className="mr-4" size={24} />
+                    <item.icon className="mr-3" size={20} />
                     {item.text}
                   </a>
                 );
@@ -152,26 +150,25 @@ function NavBar() {
                     key={index}
                     href={`#${item.id}`}
                     onClick={(e) => handleSmoothScroll(e, item.id)}
-                    className="flex items-center px-6 py-4 text-white rounded-xl hover:bg-purple-500/30 transition-colors text-lg"
+                    className="flex items-center px-4 py-3 text-white rounded-xl hover:bg-purple-500/20 transition-colors text-base font-medium"
+                    style={{ textDecoration: 'none' }}
                   >
-                    <item.icon className="mr-4" size={24} />
+                    <item.icon className="mr-3" size={20} />
                     {item.text}
                   </a>
                 );
               }
             })}
             
-            {/* Mobile GitHub Button */}
+            {/* Mobile Contact Button */}
             <a
-              href="https://github.com/soumyajit4419/Portfolio"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center px-6 py-4 text-white rounded-xl hover:bg-purple-500/30 transition-colors text-lg"
-              onClick={() => setIsOpen(false)}
+              href="#contact"
+              onClick={(e) => handleSmoothScroll(e, "contact")}
+              className="flex items-center px-4 py-3 text-white rounded-xl hover:bg-purple-500/20 transition-colors text-base font-medium"
+              style={{ textDecoration: 'none' }}
             >
-              <CgGitFork className="mr-4" size={24} />
-              <AiFillStar className="mr-4" size={22} />
-              <span>GitHub Repo</span>
+              <AiOutlineMail className="mr-3" size={20} />
+              <span>Contact Me</span>
             </a>
           </div>
         </div>

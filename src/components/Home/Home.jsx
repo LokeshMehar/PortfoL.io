@@ -7,7 +7,7 @@ import Particle from "../Particle";
 
 function Home() {
   return (
-    <section>
+    <section id="home">
       <Container fluid className="home-section px-0" id="home">
         <Particle />
         <Container className="home-content">
@@ -41,7 +41,7 @@ function Home() {
           </Row>
         </Container>
       </Container>
-      
+      <div id="about"></div>
     </section>
   );
 }

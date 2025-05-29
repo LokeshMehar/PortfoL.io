@@ -6,12 +6,12 @@ import { styles } from '../styles';
 import { fadeIn } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
 import Github from './Github';
-import myImg from '../assets/about.png'; // Ensure correct path
+import myImg from '../assets/about.png';
 
 const About = () => {
   return (
     <>
-      <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-12 " id='about'>
+      <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-12 ">
         {/* Text Block */}
         <motion.div
           variants={fadeIn('', '', 0.1, 1)}

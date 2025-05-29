@@ -8,7 +8,7 @@ const Projects = () => {
   const [hoveredProject, setHoveredProject] = useState(null);
 
   return (
-    <div id="project">
+    <>
       <SlideIn direction="left" >
         <div className="font-sans" >
           <div className="text-center mb-7 mx-4">
@@ -228,7 +228,7 @@ const Projects = () => {
           </div>
         </div>
       </SlideIn>
-    </div>
+    </>
   );
 };
 
