@@ -12,7 +12,7 @@ const About = () => {
   return (
     <>
       <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-12 ">
-        /* Text Block */
+        
         <motion.div
           variants={fadeIn('', '', 0.1, 1)}
           className="flex-1 max-w-xl"
@@ -24,7 +24,7 @@ const About = () => {
           </p>
         </motion.div>
 
-        /* Image Block */}
+        
         <Tilt
           glareEnable={true}
           glareMaxOpacity={0.45}
