@@ -12,7 +12,7 @@ const About = () => {
   return (
     <>
       <div className="mt-10 flex flex-col md:flex-row items-center justify-between gap-12 ">
-        {/* Text Block */}
+        /* Text Block */
         <motion.div
           variants={fadeIn('', '', 0.1, 1)}
           className="flex-1 max-w-xl"
@@ -20,16 +20,11 @@ const About = () => {
           <p className={`${styles.sectionSubText}`}>Introduction</p>
           <h2 className={`${styles.sectionHeadText} mb-4`}>Overview.</h2>
           <p className="text-secondary text-[17px] leading-[30px]">
-            As a seasoned Software Engineer proficient in Python and Machine Learning, I bring
-            a wealth of experience and a proven track record in executing large-scale
-            projects. With a strong foundation in cutting-edge algorithms, I am eager to join
-            a top-tier Web Development team. Together, we can tackle complex software
-            challenges and drive innovation. Let&apos;s shape the future of AI and build
-            extraordinary solutions.
+            I am a passionate Software Developer with hands-on experience across a wide range of development tasks, from building responsive front-end interfaces to designing robust back-end systems. My journey has equipped me with a solid understanding of modern web technologies and best practices. As an aspiring Full Stack Developer, I am eager to contribute to dynamic teams, tackle real-world challenges, and continuously expand my skill set. I thrive on learning new tools and frameworks, and I am committed to delivering high-quality, scalable solutions that make a meaningful impact.
           </p>
         </motion.div>
 
-        {/* Image Block */}
+        /* Image Block */}
         <Tilt
           glareEnable={true}
           glareMaxOpacity={0.45}
