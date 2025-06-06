@@ -6,6 +6,11 @@ import Projects from './Projects';
 // import Tech from './Tech';
 import Experience from './Experience';
 import Contact from './Contact';
+import Github from './Github';
+import Preloader from './Preloader';
+import DSAStatCircle from './DsaStatCircle';
+import TechStackSections from './TechStackSections';
+
 
 export {
   // Hero,
@@ -13,6 +18,10 @@ export {
   About,
   Experience,
   // Tech,
+  Github,
+  Preloader,  
+  DSAStatCircle,
+  TechStackSections,
   Projects,
   Contact,
   EarthCanvas, 
