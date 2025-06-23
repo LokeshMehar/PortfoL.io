@@ -7,7 +7,7 @@ import Projects from './Projects';
 import Experience from './Experience';
 import Contact from './Contact';
 import Github from './Github';
-import Preloader from './Preloader';
+import Preloader from './Pre';
 import DSAStatCircle from './DsaStatCircle';
 import TechStackSections from './TechStackSections';
 
