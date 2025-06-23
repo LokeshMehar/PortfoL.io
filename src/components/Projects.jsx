@@ -174,7 +174,7 @@ const Projects = () => {
                             }}
                           >
                             <img
-                              src={`/img/tech-icons/${tech}.svg`}
+                              src={`/tech-icons/${tech}.svg`}
                               alt={tech}
                               className="h-8 w-8 object-contain transition-all duration-300"
                               title={tech}

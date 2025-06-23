@@ -92,7 +92,7 @@ const TechCarousel = ({ title, items }) => {
               const formattedTech = formatTechName(tech);
               const iconSrc = `/tech-icons/${formattedTech}.svg`;
 
-              console.log(`Attempting to load icon: ${iconSrc}`);
+              // console.log(`Attempting to load icon: ${iconSrc}`);
 
               return (
                 <div
