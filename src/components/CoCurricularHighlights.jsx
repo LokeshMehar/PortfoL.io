@@ -42,6 +42,7 @@ const CoCurricularHighlightsCard = () => (
         <h4 className="text-white font-bold mb-3 text-[16px]">
           Key Skills Developed
         </h4>
+        
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
           <div className="text-center">
             <div className="text-blue-300 font-semibold text-sm">Team Management</div>
@@ -55,6 +56,7 @@ const CoCurricularHighlightsCard = () => (
             <div className="text-yellow-300 font-semibold text-sm">Result-Oriented</div>
             <div className="text-xs text-gray-400 mt-1">Competitive mindset</div>
           </div>
+          
         </div>
       </div>
     </div>

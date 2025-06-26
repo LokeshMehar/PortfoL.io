@@ -4,8 +4,20 @@ import homeLogo from "../../Assets/home-main.svg";
 // import Home2 from "./Home2";
 import Type from "./Type";
 import Particle from "../Particle";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 function Home() {
+   const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollTo) {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location.state]);
   return (
     <section id="home">
       <Container fluid className="home-section px-0" id="home">
