@@ -5,7 +5,6 @@ import {
   Contact,
   Experience,
   Navbar,
-  StarsCanvas,
   Projects,
 } from './components';
 
@@ -16,6 +15,7 @@ import { useEffect, useState } from 'react';
 import Home from './components/Home/Home';
 import TechStackSections from './components/TechStackSections';
 import Resume from './components/Resume';
+import ContactSection from './components/ContactSection';
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -28,12 +28,7 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  const ContactSection = () => (
-    <div className="relative z-0">
-      <Contact/>
-      <StarsCanvas/>
-    </div>
-  );
+  
 
   return (
     <BrowserRouter>
@@ -58,7 +53,6 @@ function App() {
           <Route path="/resume" element={
             <>
               <Resume/>
-              {/* <ContactSection /> */}
             </>
           } />
         </Routes>
