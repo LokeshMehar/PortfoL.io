@@ -38,7 +38,6 @@ function App() {
         <Navbar/>
         
         <Routes>
-          {/* Home route - shows all sections */}
           <Route path="/" element={
             <>
               <Home/>
@@ -53,7 +52,7 @@ function App() {
             </>
           } />
           
-          {/* Resume route - shows only resume and contact */}
+          
           <Route path="/resume" element={
             <>
               <Resume/>

@@ -1,7 +1,6 @@
 
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/home-main.svg";
-// import Home2 from "./Home2";
+import homeLogo from "../../assets/home-main.svg";
 import Type from "./Type";
 import Particle from "../Particle";
 import { useLocation } from "react-router-dom";
