@@ -6,6 +6,7 @@ import {
   Experience,
   Navbar,
   Projects,
+  StarsCanvas,
 } from './components';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -45,7 +46,10 @@ function App() {
               <Experience/>
               <Projects/>
               <TechStackSections/>
-              <ContactSection />
+              <div className="relative z-0">
+      <Contact/>
+      <StarsCanvas/>
+    </div>
             </>
           } />
           
