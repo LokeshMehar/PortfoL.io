@@ -109,7 +109,7 @@ const DSAStatCircle = () => {
         {hoveredIndex === null ? (
           <>
             <div>
-              <span className="text-2xl font-bold">731</span>
+              <span className="text-2xl font-bold">733</span>
               <span className="text-sm font-extralight">/3548</span>
             </div>
             <span className="text-lg font-semibold">Solved</span>
@@ -122,7 +122,7 @@ const DSAStatCircle = () => {
             </span>
             <span className="text-sm font-semibold mb-1">
               {data[hoveredIndex].solved}
-              <span className="text-xs font-thin mb-1">/731</span>
+              <span className="text-xs font-thin mb-1">/733</span>
             </span>
 
             <div className="flex flex-col items-center space-y-1">
