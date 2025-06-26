@@ -28,7 +28,7 @@ const Experience = () => {
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
           <ExperienceCardDSA />
-          <GitHubCard contributionCount={662} />
+          <GitHubCard contributionCount={681} />
           <CSCoreProficiencyCard />
           <AcademicBackgroundCard />
           <CoCurricularHighlightsCard />

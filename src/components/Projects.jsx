@@ -65,7 +65,7 @@ const Projects = () => {
                         : 'rgba(196, 181, 253, 0.8)',
                     }}
                   >
-                    {String(index + 1).padStart(2, '0')} | Project Type
+                    {String(index + 1).padStart(2, '0')} | {project.type}
                   </span>
                   <a
                     href={project.sourceCode}

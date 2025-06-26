@@ -8,7 +8,7 @@ const circumference = 2 * Math.PI * radius
 const data = [
   {
     label: 'Easy',
-    solved: 207,
+    solved: 209,
     total: 876,
     color: '#00C49F',
     bgColor: '#b2dfd4',
@@ -17,7 +17,7 @@ const data = [
   },
   {
     label: 'Medium',
-    solved: 462,
+    solved: 470,
     total: 1840,
     color: '#FFBB28',
     bgColor: '#ffe7b2',
@@ -26,7 +26,7 @@ const data = [
   },
   {
     label: 'Hard',
-    solved: 51,
+    solved: 54,
     total: 832,
     color: '#FF4C4C',
     bgColor: '#ffb2b2',
@@ -109,7 +109,7 @@ const DSAStatCircle = () => {
         {hoveredIndex === null ? (
           <>
             <div>
-              <span className="text-2xl font-bold">720</span>
+              <span className="text-2xl font-bold">731</span>
               <span className="text-sm font-extralight">/3548</span>
             </div>
             <span className="text-lg font-semibold">Solved</span>
@@ -122,7 +122,7 @@ const DSAStatCircle = () => {
             </span>
             <span className="text-sm font-semibold mb-1">
               {data[hoveredIndex].solved}
-              <span className="text-xs font-thin mb-1">/720</span>
+              <span className="text-xs font-thin mb-1">/731</span>
             </span>
 
             <div className="flex flex-col items-center space-y-1">
