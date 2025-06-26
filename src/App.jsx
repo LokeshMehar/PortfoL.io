@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {
   About,
   Contact,
@@ -15,6 +15,7 @@ import Preloader from './components/Pre';
 import { useEffect, useState } from 'react';
 import Home from './components/Home/Home';
 import TechStackSections from './components/TechStackSections';
+import Resume from './components/Resume';
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -26,23 +27,42 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const ContactSection = () => (
+    <div className="relative z-0">
+      <Contact/>
+      <StarsCanvas/>
+    </div>
+  );
+
   return (
     <BrowserRouter>
-    <Preloader load={load} />
+      <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
-          <Navbar/>
-          <Home/>
-      
-        <About/>
-        <Experience/>
-        <Projects/>
-        <TechStackSections/>
-        <div className="relative z-0">
-          <Contact/>
-          <StarsCanvas/>
-        </div> 
-        </div>
-       
+        <Navbar/>
+        
+        <Routes>
+          {/* Home route - shows all sections */}
+          <Route path="/" element={
+            <>
+              <Home/>
+              <About/>
+              <Experience/>
+              <Projects/>
+              <TechStackSections/>
+              <ContactSection />
+            </>
+          } />
+          
+          {/* Resume route - shows only resume and contact */}
+          <Route path="/resume" element={
+            <>
+              <Resume/>
+              {/* <ContactSection /> */}
+            </>
+          } />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }
